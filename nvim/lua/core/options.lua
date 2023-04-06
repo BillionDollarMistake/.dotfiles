@@ -1,4 +1,5 @@
 -- https://www.kernel.org/doc/html/v4.11/process/coding-style.html
+local o = vim.opt
 local options = {
 	number = true,
 	relativenumber = true,
@@ -11,6 +12,7 @@ local options = {
         scrolloff = 999,
         updatetime = 200,
         showmode = false,
+        clipboard = o.clipboard + "unnamedplus" + "unnamed",
 }
 
 for k, v in pairs(options) do

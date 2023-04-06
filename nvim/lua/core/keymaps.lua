@@ -3,7 +3,7 @@ local keymaps = {
         {{"n", "i", "v", "x"}, "<left>", "<nop>", {}},
         {{"n", "i", "v", "x"}, "<up>", "<nop>", {}},
         {{"n", "i", "v", "x"}, "<down>", "<nop>", {}},
-        {{"c"}, "Q", "q", {noremap = true}},
+        {{"c"}, "Q", "q", {noremap = true}}, -- vim.api.nvim_add_user_command() alternative
         {{"c"}, "W", "w", {noremap = true}},
         {{"n", "v"}, "p", [["+p]], {noremap = true}},
         {{"n", "v"}, "y", [["+y]], {noremap = true}},
