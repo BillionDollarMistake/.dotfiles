@@ -9,7 +9,7 @@ local options = {
         textwidth = 80,
         hlsearch = false,
         scrolloff = 999,
-        updatetime = 50,
+        updatetime = 200,
         showmode = false,
 }
 

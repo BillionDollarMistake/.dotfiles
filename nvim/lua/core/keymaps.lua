@@ -3,6 +3,11 @@ local keymaps = {
         {{"n", "i", "v", "x"}, "<left>", "<nop>", {}},
         {{"n", "i", "v", "x"}, "<up>", "<nop>", {}},
         {{"n", "i", "v", "x"}, "<down>", "<nop>", {}},
+        {{"c"}, "Q", "q", {noremap = true}},
+        {{"c"}, "W", "w", {noremap = true}},
+        {{"n", "v"}, "p", [["+p]], {noremap = true}},
+        {{"n", "v"}, "y", [["+y]], {noremap = true}},
+        {{"n", "v"}, "x", [["_x]], {noremap = true}},
         {{"n", "v"}, "d", [["_d]], {noremap = true}},
         {{"n", "v"}, "c", [["_c]], {noremap = true}},
 }
