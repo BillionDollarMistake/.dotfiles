@@ -1,7 +1,22 @@
 vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/lazy.nvim") -- rtm stands for run-time path
 require("lazy").setup({  -- make sure you have run install_lazy.sh first
         {"easymotion/vim-easymotion"},
-        {"github/copilot.vim"},
+        {
+                "zbirenbaum/copilot.lua",
+                event = "InsertEnter",
+                dependencies = {
+                        "github/copilot.vim",
+                },
+        },
+        {
+                "windwp/nvim-autopairs",
+                config = function ()
+                        require('nvim-autopairs').setup({
+                                map_cr = false,
+                                map_complete = true,
+                        })
+                end,
+        },
 {
         'VonHeikemen/lsp-zero.nvim',
         dependencies = {

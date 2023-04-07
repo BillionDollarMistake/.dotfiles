@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import os
 
-# files inside dst_dir will be symlinks to src_dir's files
+# files inside dst_dir will be symlinked to src_dir's files
 def handle_subdir(src_dir, dst_dir):
     subdirs = [f.name for f in os.scandir(src_dir) if f.is_dir()]
     files = [f.name for f in os.scandir(src_dir) if f.is_file()]
