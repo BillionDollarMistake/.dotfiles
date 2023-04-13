@@ -2,7 +2,7 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 -- to see full list https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
-local servers = {"pyright", "tsserver", "lua_ls", "clangd", "html", "jsonls"}
+local servers = {"pyright", "tsserver", "lua_ls", "clangd", "html", "jsonls", "rust_analyzer", "bashls", "gopls"}
 lsp.ensure_installed(servers)
 
 -- Fix Undefined global 'vim'

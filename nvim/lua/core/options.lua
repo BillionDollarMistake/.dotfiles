@@ -1,6 +1,7 @@
 -- https://www.kernel.org/doc/html/v4.11/process/coding-style.html
 local o = vim.opt
 local options = {
+        swapfile = false,
 	number = true,
 	relativenumber = true,
 	tabstop = 8,
