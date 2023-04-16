@@ -1,6 +1,7 @@
 -- https://www.kernel.org/doc/html/v4.11/process/coding-style.html
 local o = vim.opt
 local options = {
+        pumheight = 7,
         swapfile = false,
 	number = true,
 	relativenumber = true,

@@ -17,15 +17,15 @@ require("lazy").setup({  -- make sure you have run install_lazy.sh first
                         })
                 end,
         },
-{
-        'VonHeikemen/lsp-zero.nvim',
-        dependencies = {
-                {'neovim/nvim-lspconfig'},
-                {'williamboman/mason-lspconfig.nvim'},
-                {'williamboman/mason.nvim',},
-                {'hrsh7th/nvim-cmp'},
-                {'hrsh7th/cmp-nvim-lsp'},
-                {'L3MON4D3/LuaSnip'},
+        {
+                'VonHeikemen/lsp-zero.nvim',
+                dependencies = {
+                        {'neovim/nvim-lspconfig'},
+                        {'williamboman/mason-lspconfig.nvim'},
+                        {'williamboman/mason.nvim',},
+                        {'hrsh7th/nvim-cmp'},
+                        {'hrsh7th/cmp-nvim-lsp'},
+                        {'L3MON4D3/LuaSnip'},
+                }
         }
-}
 })

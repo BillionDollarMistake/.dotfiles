@@ -5,6 +5,23 @@ lsp.preset("recommended")
 local servers = {"pyright", "tsserver", "lua_ls", "clangd", "html", "jsonls", "rust_analyzer", "bashls", "gopls"}
 lsp.ensure_installed(servers)
 
+
+local lspconfig = require("lspconfig")
+lsp.configure("clangd", {
+        cmd = {
+                "clangd",
+                "--background-index",
+                "--header-insertion=never",
+                "--suggest-missing-includes",
+                "--clang-tidy",
+                "--compile-commands-dir=build"
+        },
+        root_dir = lspconfig.util.root_pattern(".git"),
+        init_options = {
+                compilationDatabasePath = "build"
+        }
+})
+
 -- Fix Undefined global 'vim'
 lsp.configure("lua_ls", {
         settings = {
