@@ -2,6 +2,15 @@ vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/lazy.nvim") -- rtm stands f
 require("lazy").setup({  -- make sure you have run install_lazy.sh first
         {"easymotion/vim-easymotion"},
         {
+                "liuchengxu/vista.vim",
+                config = function ()
+                        vim.g.vista_default_executive = "nvim_lsp"
+                        local g = vim.g
+                        g.vista_sidebar_hide_on_bufleave = true
+                        g.vista_sidebar_autoclose = true
+                end,
+        },
+        {
                 "zbirenbaum/copilot.lua",
                 event = "InsertEnter",
                 dependencies = {
