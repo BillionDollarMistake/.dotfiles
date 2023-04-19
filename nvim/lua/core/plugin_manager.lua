@@ -3,6 +3,16 @@ require("lazy").setup({  -- make sure you have run install_lazy.sh first
         {"easymotion/vim-easymotion"},
         {"ray-x/lsp_signature.nvim"},
         {
+                "ray-x/navigator.lua",
+                dependencies = {
+                        {
+                                "ray-x/guihua.lua",
+                                build = "cd lua/fzy && make",
+                        },
+                        "neovim/nvim-lspconfig",
+                },
+        },
+        {
                 "liuchengxu/vista.vim",
                 config = function ()
                         vim.g.vista_default_executive = "nvim_lsp"
