@@ -5,3 +5,4 @@ mkdir -p $lazypath
 cd $lazypath
 git clone https://github.com/folke/lazy.nvim
 cd --
+sudo apt install universal-ctags -y
