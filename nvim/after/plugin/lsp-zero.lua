@@ -9,12 +9,11 @@ local lspconfig = require("lspconfig")
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities = vim.tbl_extend('force', lspconfig.util.default_config.capabilities, capabilities)
 capabilities = vim.tbl_extend('force', capabilities, vim.lsp.protocol.make_client_capabilities())
-capabilities.offsetEncoding = {"utf-8"} -- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428
+capabilities.offsetEncoding = {"utf-16"} -- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428
 
 for _, server in pairs(servers) do
         lsp.configure(server, {
                 capabilities = capabilities,
-                root_dir = lspconfig.util.root_pattern(".git"),
         })
 end
 
@@ -37,7 +36,6 @@ lsp.configure("clangd", {
 -- Fix Undefined global 'vim'
 lsp.configure("lua_ls", {
         capabilities = capabilities,
-        root_dir = lspconfig.util.root_pattern(".git"),
         settings = {
                 Lua = {
                         diagnostics = {

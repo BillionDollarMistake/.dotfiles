@@ -1,6 +1,7 @@
 -- https://www.kernel.org/doc/html/v4.11/process/coding-style.html
 local o = vim.opt
 local options = {
+        cursorline = true,
         pumheight = 7,
         swapfile = false,
 	number = true,
