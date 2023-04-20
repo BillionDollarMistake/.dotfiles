@@ -6,10 +6,9 @@ local servers = {"pyright", "tsserver", "lua_ls", "clangd", "html", "jsonls", "r
 lsp.ensure_installed(servers)
 
 local lspconfig = require("lspconfig")
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-capabilities = vim.tbl_extend('force', lspconfig.util.default_config.capabilities, capabilities)
-capabilities = vim.tbl_extend('force', capabilities, vim.lsp.protocol.make_client_capabilities())
+local capabilities = vim.tbl_extend("keep", require('cmp_nvim_lsp').default_capabilities(), lspconfig.util.default_config.capabilities, vim.lsp.protocol.make_client_capabilities())
 capabilities.offsetEncoding = {"utf-16"} -- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 for _, server in pairs(servers) do
         lsp.configure(server, {

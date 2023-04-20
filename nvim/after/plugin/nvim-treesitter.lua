@@ -6,3 +6,4 @@ local o = vim.o
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 o.foldnestmax = 1
+-- o.foldenable = false

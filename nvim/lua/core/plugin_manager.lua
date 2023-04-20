@@ -2,12 +2,6 @@ vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/lazy.nvim") -- rtm stands f
 require("lazy").setup({                                          -- make sure you have run install_lazy.sh first
 	{ "easymotion/vim-easymotion" },
 	{ "ray-x/lsp_signature.nvim" },
-	{
-		"ray-x/aurora",
-		config = function()
-			vim.cmd.colorscheme("aurora")
-		end,
-	},
 	{ "liuchengxu/vista.vim", },
 	{
 		"zbirenbaum/copilot.lua",
