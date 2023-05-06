@@ -1,7 +1,9 @@
 -- https://www.kernel.org/doc/html/v4.11/process/coding-style.html
 local o = vim.opt
 local options = {
+        iskeyword = o.iskeyword + "-" + "_";
         cursorline = true,
+        cursorlineopt = "screenline",
         pumheight = 7,
         swapfile = false,
 	number = true,
